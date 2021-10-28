@@ -1,0 +1,4 @@
+:root {
+  --pirm-clr: hsl(0, 10%, 43%);
+  background: var(--pirm-clr);
+}
