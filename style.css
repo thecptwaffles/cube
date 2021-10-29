@@ -18,14 +18,13 @@
   height: 100%;
   position: relative;
   animation: spin 5s infinite linear;
-
 }
 
 .face {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(var(--sec-clr), var(--accent-clr));
+  background-image: linear-gradient(90deg, var(--sec-clr), var(--accent-clr));
 }
 
 .top {
