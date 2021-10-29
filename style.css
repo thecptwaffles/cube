@@ -1,4 +1,63 @@
 :root {
-  --pirm-clr: hsl(0, 10%, 43%);
+  --pirm-clr: #796363;
+  --sec-clr: #e15287;
+  --accent-clr: #7fd1ae;
   background: var(--pirm-clr);
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+  margin: 100px auto 0;
+}
+
+.cube {
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  animation: spin 5s infinite linear;
+
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(var(--sec-clr), var(--accent-clr));
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.front {
+  transform: rotateX(0deg) translateZ(100px);
+}
+
+.back {
+  transform: rotateX(-180deg) translateZ(100px);
+}
+
+@keyframes spin {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
 }
